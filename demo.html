@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🔥 Video Background Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link href="css/style.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body, html {
+      height: 100%;
+    }
+    .my-video-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .my-video-section video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    .my-video-overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 1;
+    }
+    .my-video-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+      flex-direction: column;
+    }
+    .my-video-btn {
+      margin-top: 20px;
+      padding: 15px 35px;
+      background: #ff6600;
+      color: white;
+      border: none;
+      font-size: 18px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<section class="custom-video-hero">
+  <video autoplay muted loop playsinline class="custom-video-bg">
+    <source src="/images/abc.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Dark overlay -->
+  <div class="custom-video-overlay"></div>
+
+  <!-- Content -->
+  <div class="custom-video-content">
+    <h1>Welcome to Jazar</h1>
+    <p>Innovating today for a better tomorrow</p>
+    <a href="about.html" class="custom-video-btn">Discover More</a>
+  </div>
+</section>
+
+</body>
+</html>

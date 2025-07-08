@@ -163,91 +163,29 @@
 
 
         <!-- Banner Section -->
-        <section class="banner-section banner-two">
+<section class="custom-video-hero">
+  <video autoplay muted loop playsinline class="custom-video-bg">
+    <source src="/images/abc.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-            <div class="banner-carousel owl-theme owl-carousel">
-                <!-- Slide Item -->
-                <div class="slide-item">
-                    <div class="image-layer" style="background-image: url('images/gallery/slider\ 4\ \(2\).jpg');"></div>
-                    <div class="shape-1"></div>
-                    <div class="shape-2"></div>
-                    <div class="shape-3"></div>
-                    <div class="shape-4"></div>
-                    <div class="shape-5"></div>
-                    <div class="shape-6"></div>
-                    <div class="auto-container">
-                        <div class="content-box">
-                            <div class="content">
-                                <div class="inner">
-                                    <div class="sub-title">welcome to XYZ solution</div>
-                                    <h1>“Powering Business Through  <br> Technology & Talent”</h1>
-                                    <div class="link-box">
-                                        <a class="theme-btn btn-style-one" href="about.html">
-                                            <i class="btn-curve"></i>
-                                            <span class="btn-title">Discover More</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <!-- Dark overlay -->
+  <div class="custom-video-overlay"></div>
 
-                <!-- Slide Item -->
-                <div class="slide-item">
-                    <div class="image-layer" style="background-image: url('images/gallery/slider3.jpg');"></div>
-                    <div class="shape-1"></div>
-                    <div class="shape-2"></div>
-                    <div class="shape-3"></div>
-                    <div class="shape-4"></div>
-                    <div class="shape-5"></div>
-                    <div class="shape-6"></div>
-                    <div class="auto-container">
-                        <div class="content-box">
-                            <div class="content">
-                                <div class="inner">
-                                    <div class="sub-title">welcome to XYZ solution</div>
-                                    <h1>Smart Web </h1>
-                                    <div class="link-box">
-                                        <a class="theme-btn btn-style-one" href="about.html">
-                                            <i class="btn-curve"></i>
-                                            <span class="btn-title">Get a Free Quote</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <!-- Content -->
+  <div class="custom-video-content">
+    <h1>Welcome to Jazar</h1>
+    <p>Innovating today for a better tomorrow</p>
+    <a href="about.html" class="custom-video-btn">Discover More</a>
+  </div>
+</section>
 
-                <!-- Slide Item -->
-                <div class="slide-item">
-                    <div class="image-layer" style="background-image: url('images/gallery/wmremove-transformed.jpeg');"></div>
-                    <div class="shape-1"></div>
-                    <div class="shape-2"></div>
-                    <div class="shape-3"></div>
-                    <div class="shape-4"></div>
-                    <div class="shape-5"></div>
-                    <div class="shape-6"></div>
-                    <div class="auto-container">
-                        <div class="content-box">
-                            <div class="content">
-                                <div class="inner">
-                                    <div class="sub-title">welcome to XYZ solution</div>
-                                    <h1>Smart Web </h1>
-                                    <div class="link-box">
-                                        <a class="theme-btn btn-style-one" href="about.html">
-                                            <i class="btn-curve"></i>
-                                            <span class="btn-title">Discover More</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-        </section>
+
+
+
+
+
         <!--End Banner Section -->
 
         <!-- Funfacts Section -->
@@ -1728,7 +1666,7 @@
                             <div class="form-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
                                 <div class="default-form">
                                     <h4>Get a free quote <span>.</span></h4>
-                                    <form method="post" action="contact.html">
+                                    <form id="quoteForm" method="post" action="contact.html">
                                         <div class="form-group">
                                             <div class="field-inner">
                                                 <input type="text" name="username" value="" placeholder="Your Name"
@@ -2063,6 +2001,7 @@
     <script src="js/jQuery.style.switcher.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.2/js.cookie.min.js">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/jarallax.min.js"></script>
     <script src="js/custom-script.js"></script>
@@ -2071,6 +2010,21 @@
     <script src="js/lang.js"></script>
     <!-- <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="js/color-switcher.js"></script> -->
+    <script>
+  document.getElementById('quoteForm').addEventListener('submit', function (e) {
+    e.preventDefault(); 
+
+    Swal.fire({
+      icon: 'success',
+      title: 'Thank you!',
+      text: "We'll get back to you soon.",
+      confirmButtonText: 'Okay'
+    }).then(() => {
+     
+    });
+  });
+</script>
+
 
 </body>
 
